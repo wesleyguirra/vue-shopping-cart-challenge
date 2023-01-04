@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <HomePage />
+  <ShoppingCart />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import HomePage from "@/components/HomePage";
+import ShoppingCart from "@/components/ShoppingCart";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    HomePage,
+    ShoppingCart,
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+* {
+  font-family: sans-serif;
+}
+.btn {
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+
+  &.primary {
+    background: black;
+    color: white;
+  }
+  &.secondary {
+    background: lightgray;
+    color: black;
+  }
+  &.error {
+    background: indianred;
+    color: white;
+  }
+  &.small {
+    padding: 6px 10px;
+  }
 }
 </style>
